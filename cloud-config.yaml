@@ -1,0 +1,32 @@
+#cloud-config
+groups:
+  - ansi
+  - cloud-users
+
+users:
+  - default
+  - name: ansi
+    gecos: Ansible
+    primary_group: ansi
+    groups: [cloud-users, sudo]
+    lock_passwd: true
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    ssh_import_id: None
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFMH7X1SmXKU2N+e5HNqQAOu+zi9rwChdg3UiqTnm/vW dergachev.anton@otr.ru
+
+packages:
+  - htop
+  - vim
+  - mc
+  - rsync
+
+package_update: true
+package_upgrade: true
+
+power_state:
+  delay: "+30"
+  mode: reboot
+  message: Bye Bye
+  timeout: 30
+  condition: true
