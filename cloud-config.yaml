@@ -14,6 +14,7 @@ users:
     ssh_import_id: None
     ssh_authorized_keys:
       - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFMH7X1SmXKU2N+e5HNqQAOu+zi9rwChdg3UiqTnm/vW dergachev.anton@otr.ru
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKJjFSvH6eUu6VqEMp13ROYzQoF7ZqKJj3DeuvsO+gXU ansi@avd-pc
 
 packages:
   - htop
